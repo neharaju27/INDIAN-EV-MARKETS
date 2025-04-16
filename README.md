@@ -1,61 +1,80 @@
-# ⚡ Electric Vehicle Insights Dashboard
+# Indian EV Market Dashboard 📊
 
-An interactive and responsive dashboard built with **Streamlit** and **Plotly** that provides a visual deep-dive into electric vehicle (EV) trends, categorized sales data, vehicle classes, and market performance over the years.
+## Introduction
+The purpose of the Indian EV Market Dashboard is to provide a comprehensive, interactive visualization of the electric vehicle landscape in India. By analyzing key metrics and trends within the EV market, this dashboard offers insights into EV adoption rates, market share, regional distributions, vehicle types, and growth patterns over time. This tool aims to support data-driven decision-making for stakeholders such as policymakers, industry analysts, and businesses, helping them understand market dynamics and identify emerging opportunities in India’s rapidly evolving EV sector.
 
-![EV Dashboard Banner](ev_market_logo.webp)
+## Project Type
+Data Analysis using Python Libraries
 
----
+## 🛠**Tools and Dataset Used:**
+**1.Dataset Used**: [Indian EV Market Dataset](https://www.kaggle.com/datasets/srinrealyf/india-ev-market-data)
 
-## 🎯 Motivation
+**2. Data Handling**: Pandas, NumPy
 
-With the rapid rise of electric vehicles, understanding the evolving landscape of EV adoption is crucial for manufacturers, policy makers, and consumers. This dashboard aims to:
+**3. Visualization**: Matplotlib, Seaborn , Plotly
 
-- Provide a comprehensive overview of EV sales trends.
-- Highlight key market players and their growth trajectories.
-- Break down EV distribution by category and class.
-- Offer insights into operational EV presence over time.
+**4. Web App Framework**: Streamlit.io
 
----
 
-## 📊 Dashboard Walkthrough
+## Deplolyed App
+Indian EV Market: https://indian-ev-markets-iyb9zidbn4dftn9lqtgeco.streamlit.app/
 
-Here's what you’ll find in the dashboard:
+## Directory Structure
+INDIAN-EV-MARKET-DASHBOARD
+- ├─ assets/
+- │  ├─ ├─ EV Maker by Place.csv/
+- │  ├─ datasets/
+- │  ├─ ├─ ev_cat_01-24.csv/
+- │  ├─ ├─ ev_sales_by_makers_and_cat_15-24.csv/
+- │  ├─ ├─ OperationalPC.csv/
+- │  ├─ ├─ Vehicle Class - All.csv/
+- ├─ images/
+- │  ├─ analysis.ico/
+- │  ├─ Indian EV Market Logo.svg/
+- ├─ /
+- ├─ colab.charts.py/
+- ├─ main.py/
+- ├─ requirements.txt/
+- ├─ README.md/
 
-### 🔍 Filters Panel
-- Toggle on/off to refine insights based on:
-  - EV Maker
-  - Year (2015–2024)
-  - Vehicle Category (SUV, Sedan, etc.)
-  - Vehicle Class
 
-### 📈 KPIs and Visualizations
-- **EV Sales Over Time:** Multi-year sales trend per maker.
-- **Category Distribution:** Vehicle category performance for selected year.
-- **Top EV Makers:** Ranking of top 10 makers by annual sales.
-- **Vehicle Class Analysis:** Registration trends by class.
-- **Market Share Pie Chart:** Proportional market share visualization.
-- **YoY Growth Chart:** Percentage sales growth compared to the previous year.
-- **EV Sales Trend (Line Chart):** Cumulative EV sales evolution over the years.
-- **Data Explorer:** Tabular breakdown of filtered sales data.
+## Features
+- Analysis of overall EV Market (2001-2024).
+- KPIs of Overall EV Market.
+- Top 10 Manufacturer Analysis and Market Share for each year.
+- Growth of EV Market for each Vehicle Class.
+- Operational Charging Station Analysis.
+- Dynamic Map Representation of EV Adoption.
 
----
+## Design decisions or assumptions
+- Used Alatair Charts instead of Streamlit Charts for sorting data and applying custom color schemes.
+- Used Plotly Express library for line plots instead of Streamlit Line plots for further customisation options.
+- Used Mapbox library for a responsive and better looking map plot.
+- Used third party Geojson data for accurate map plotting.
+- Webapp divided into different segments for different analysis.
+- Specific filters are segregated according to each section of analysis.
+- Used a custom footer component available in Streamlit community, due to no footer component in streamlit documentation.
 
-## 🗂 Data Sources
+## Installation & Getting started
+Detailed instructions on how to install:
 
-The application processes and visualizes the following datasets (CSV files):
-- `EV Maker by Place.csv`: EV makers by location.
-- `ev_cat_01-24.csv`: Category-level EV data from 2001 to 2024.
-- `ev_sales_by_makers_and_cat_15-24.csv`: Historical EV sales data by maker and category.
-- `OperationalPC.csv`: Operational EV passenger cars data.
-- `Vehicle Class - All.csv`: Data on EV registrations by vehicle class.
+- Setup a virtual environent
+- Install the following libraries
+- - pip install python
+- - pip install pandas
+- - pip install altair
+- - pip install plotly
+- - pip install streamlit
 
-Ensure these files are placed in the project root.
+## Usage
+How to use our project:
+- Run a local Streamlit server
+- - streamlit run main.py
 
----
-
-## 🛠 Installation
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/ev-dashboard.git
-   cd ev-dashboard
+## Technology Stack
+- Python
+- Pandas
+- Altair
+- Plotly.express
+- Mapbox
+- Streamlit
